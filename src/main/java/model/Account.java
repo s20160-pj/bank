@@ -1,34 +1,35 @@
 package model;
 
-import java.math.BigDecimal;
+import controller.AccountNrAnnotation;
 
 public class Account extends User {
-    private BigDecimal balance;
-    private int accountNr;
+    private Double balance;
+    @AccountNrAnnotation(accountNrAnnotation = 11000011110000111100001111d)
+    private Double accountNr;
 
-    public Account(int id, String name, String surname, BigDecimal balance, int accountNr) {
+    public Account(int id, String name, String surname, Double balance, Double accountNr) {
         super(id, name, surname);
         this.balance = balance;
         this.accountNr = accountNr;
     }
 
-    public Account(BigDecimal balance) {
+    public Account(Double balance) {
         this.balance = balance;
     }
 
-    public BigDecimal getBalance() {
+    public Double getBalance() {
         return balance;
     }
 
-    public void setBalance(BigDecimal balance) {
+    public void setBalance(Double balance) {
         this.balance = balance;
     }
 
-    public int getAccountNr() {
+    public Double getAccountNr() {
         return accountNr;
     }
 
-    public void setAccountNr(int accountNr) {
+    public void setAccountNr(Double accountNr) {
         this.accountNr = accountNr;
     }
 }
