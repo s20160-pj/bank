@@ -12,6 +12,6 @@ public class AccountNrValidation implements ConstraintValidator<AccountNrAnnotat
     }
 
     public boolean isValid(Double accountNr, ConstraintValidatorContext constraintValidatorContext) {
-        return accountNr.toString().trim().length() != 26;
+        return accountNr.toString().length() != 26;
     }
 }

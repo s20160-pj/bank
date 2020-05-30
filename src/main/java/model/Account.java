@@ -2,19 +2,15 @@ package model;
 
 import controller.AccountNrAnnotation;
 
-public class Account extends User {
+public class Account {
     private Double balance;
     @AccountNrAnnotation(accountNrAnnotation = 11000011110000111100001111d)
-    private Double accountNr;
+    private double accountNr;
+    private User user;
 
-    public Account(int id, String name, String surname, Double balance, Double accountNr) {
-        super(id, name, surname);
+    public Account(double balance, double accountNr) {
         this.balance = balance;
         this.accountNr = accountNr;
-    }
-
-    public Account(Double balance) {
-        this.balance = balance;
     }
 
     public Double getBalance() {
@@ -25,11 +21,11 @@ public class Account extends User {
         this.balance = balance;
     }
 
-    public Double getAccountNr() {
+    public double getAccountNr() {
         return accountNr;
     }
 
-    public void setAccountNr(Double accountNr) {
+    public void setAccountNr(double accountNr) {
         this.accountNr = accountNr;
     }
 }

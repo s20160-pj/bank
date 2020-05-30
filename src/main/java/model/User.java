@@ -4,15 +4,13 @@ public class User {
     private int id;
     private String name;
     private String surname;
+    private Account account;
 
-    public User(int id, String name, String surname) {
+    public User (int id, String name, String surname, Double balance, Double accountNr) {
+        Account account = new Account(balance, accountNr);
         this.id = id;
         this.name = name;
         this.surname = surname;
-    }
-
-    public User() {
-
     }
 
     public int getId() {
@@ -37,5 +35,13 @@ public class User {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }
